@@ -21,16 +21,16 @@ const CharacterDetail = ({characterData}) =>
 
     return(
         characterData.map(character =>(
-            <div key = {character.id} className='container'>
+            <div key = {character.id} className='container1'>
                 <p >{character.name}</p>
                 {
                     character.description?
                     (
-                        <p><br></br>{character.description}</p>
+                        <p>{character.description}</p>
                     )
                     :
                     (
-                        <p><br></br>Description Not Available</p>
+                        <p>Description Not Available</p>
                     )
                 }
                 <br></br><ul>

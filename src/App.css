@@ -8,6 +8,11 @@
   display:grid;
   grid-template-columns: auto auto auto;
 }
+.container1{
+  display:grid;
+  
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -17,9 +22,7 @@
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-.par{
-  margin-left:-100;
-}
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
