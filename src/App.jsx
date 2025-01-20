@@ -47,3 +47,5 @@ function App() {
 }
 
 export default App
+
+//debugging done with help from chatGPT, code written independently. 
