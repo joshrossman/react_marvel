@@ -1,9 +1,19 @@
 
-import './App.css'
-import GetMarvel from './components/GetMarvel.jsx'
+
+import './AppStyle.css'
+
+import BrowseCharacters from './components/BrowseCharacters.jsx'
 import CharacterDetail from './components/CharacterDetail.jsx'
+import Comics from './components/comics.jsx'
+import Home from './components/Home.jsx'
+import Error from './components/Error.jsx'
+import NavigationBar from './components/NavigationBar'
 import axios from 'axios';
-import { useState} from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
+
+
+
 
 function App() {
 
@@ -37,15 +47,21 @@ function App() {
   
   return (
     
-      <div>
-        <CharacterDetail characterData={characterData} />
-        <GetMarvel changeMyData={changeMyData} changeMySingleData={changeMySingleData} charactersData= {charactersData} characterData= {characterData} handleMyClick={handleClick} />
-        
+      <div className="app-container">
+        <NavigationBar />
+        <Routes>
+            <Route path='/' element={<Home  />} />
+            <Route path='/details/:id' element={<CharacterDetail characterData={characterData} />} />
+            <Route path='/browse/' element= {<BrowseCharacters handleMyClick={handleClick} charactersData={charactersData} changeMyData={changeMyData} changeMySingleData={changeMySingleData}  />} />
+            <Route path='/comics/' element=  {<Comics />} />
+            <Route path="*" element={<Error />} />
+        </Routes>
+
+ 
        </div>
     
   )
 }
 
 export default App
-
-//debugging done with help from chatGPT, code written independently. 
+ 

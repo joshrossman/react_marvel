@@ -1,12 +1,13 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react';
 import { func, array } from 'prop-types';
+import { Link } from 'react-router-dom'
 
 
 
 
 
-const GetMarvel = ({handleMyClick, charactersData, changeMyData, changeMySingleData}) =>
+const BrowseCharacters = ({handleMyClick, charactersData, changeMyData, changeMySingleData}) =>
     {
             
             
@@ -15,7 +16,8 @@ const GetMarvel = ({handleMyClick, charactersData, changeMyData, changeMySingleD
             .then(response =>
                 {
                     changeMyData(response.data.data.results)
-                    
+                    console.log(charactersData)
+                    console.log('hello')
                  
                 })
             .catch(error => 
@@ -30,25 +32,26 @@ const GetMarvel = ({handleMyClick, charactersData, changeMyData, changeMySingleD
 
     return(
         <div>
-            {charactersData.map(characterData =>(
+           {charactersData.map(characterData =>(
                 <div key = {characterData.id} className='container'>
                     <p >{characterData.name}</p>
-                    <img id={characterData.id} src={`${characterData['thumbnail']['path']}.${characterData['thumbnail']['extension']}`} height='50' weight='50' onClick={handleMyClick} ></img>
+                    <Link to={`/details/${characterData.id}`}><img id={characterData.id} src={`${characterData['thumbnail']['path']}.${characterData['thumbnail']['extension']}`} height='50' weight='50' onClick={handleMyClick} ></img></Link>
                 
                 </div>
                 )
             )}
+            
+           
        
         </div>
         
     )
 }
-GetMarvel.propTypes = {
+BrowseCharacters.propTypes = {
     handleMyClick: func,
     changeMyData: func,
     charactersData: array,
     changeMySingleData:func
    
 }
-export default GetMarvel
-
+export default BrowseCharacters

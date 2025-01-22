@@ -1,0 +1,51 @@
+nav{
+    background-color:rgb(169, 136, 96);
+    overflow:hidden;
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    font-size: 18px;
+    
+    
+ 
+
+}
+
+
+nav a {
+    float:left;
+ 
+    color: rgb(240, 239, 239);
+    text-align:center;
+    padding: 14px 16px;
+    text-decoration: u
+    ppercase;
+}
+.active{
+    background-color:rgb(87, 48, 1); 
+}
+nav a:hover{
+    background-color:rgb(160, 91, 7);
+    color:rgb(251, 255, 254);
+    font-weight: bold;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+
+}
+
+html,body {
+    margin: 0;
+    padding:0;
+    height:100%;
+    width:100%;
+    text-align: center;
+    
+  }
+body{
+    display:block;
+}
+  

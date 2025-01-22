@@ -1,15 +1,15 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+
 .container{
-  display:grid;
-  grid-template-columns: auto auto auto;
+
+  width:100%;
+  grid-template-columns: auto;
+  align-items: center;
+  text-align:center;
 }
 .container1{
   display:grid;
+  align-items: center;
+  text-align:center;
   
 }
 
@@ -49,3 +49,4 @@
 .read-the-docs {
   color: #888;
 }
+
