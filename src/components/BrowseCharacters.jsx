@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 
 
 
-
 const BrowseCharacters = ({handleMyClick, charactersData, changeMyData, changeMySingleData}) =>
     {
             
@@ -31,13 +30,13 @@ const BrowseCharacters = ({handleMyClick, charactersData, changeMyData, changeMy
         
 
     return(
-        <div>
+        <div className="container1">
            {charactersData.map(characterData =>(
-                <div key = {characterData.id} className='container'>
-                    <p >{characterData.name}</p>
+                <p >
+                    <p key = {characterData.id}>{characterData.name}</p>
                     <Link to={`/details/${characterData.id}`}><img id={characterData.id} src={`${characterData['thumbnail']['path']}.${characterData['thumbnail']['extension']}`} height='50' weight='50' onClick={handleMyClick} ></img></Link>
                 
-                </div>
+                </p>
                 )
             )}
             

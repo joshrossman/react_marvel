@@ -1,6 +1,6 @@
 
 .container{
-
+  display:grid;
   width:100%;
   grid-template-columns: auto;
   align-items: center;
@@ -8,8 +8,12 @@
 }
 .container1{
   display:grid;
+  grid-template-columns: 1fr;
   align-items: center;
   text-align:center;
+  overflow:scroll;
+  overflow-y:auto;
+  height: 80vh;  
   
 }
 
